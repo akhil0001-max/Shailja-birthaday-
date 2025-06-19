@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Shailja 🎉</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: #ff4c72;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff4c72; }
+            to { text-shadow: 0 0 30px #ff4c72; }
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .stars {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from { opacity: 0.2; }
+            to { opacity: 1; }
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        .video-container video {
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 Happy Birthday Shailja 🎉</h1>
+    <p>
+        Tum meri zindagi ki woh pyaari si line ho<br>
+        jiska kabhi 'semicolon' nahi lagta,<br>
+        kyunki humari story kabhi khatam nahi hoti 💖
+    </p>
+
+    <div class="video-container">
+        <!-- Yaha tumhari video lagegi -->
+        <video controls autoplay loop>
+            <source src="birthday.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        // Stars random bana raha hoon
+        for (let i = 0; i < 100; i++) {
+            let star = document.createElement('div');
+            star.classList.add('stars');
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.animationDuration = (Math.random() * 2 + 1) + 's';
+            document.body.appendChild(star);
+        }
+    </script>
+
+</body>
+</html>
